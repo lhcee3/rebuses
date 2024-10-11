@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Rebuses</title>
+    <title>Rebus Puzzles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  </head>
-  <body>
-	<div class="container" style="margin: auto; margin-left: auto; margin-right: auto; display: block">
-      <div class="container" style="position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); margin-left: auto; margin-right: auto">
-	    <div class="alert alert-danger text-center" role="alert" id="hint"><noscript>We need Javascript enabled for this to work. Enable javascript or switch to another browser.</noscript></div>
-	    <div class="alert alert-success text-center" role="alert" id="correct"></div>
-	    <div class="alert alert-primary text-center" role="alert">
-		  <span class="badge badge-info">
-			Rebus no.
-		    <input type="text" id="rebusNumber" size="2">
-		    <button type="button" class="badge badge-pill badge-success" id="goToRebus">Go</button>
-		    out of
-		    <span id="rebusTotal"></span>
-		  </span>
-		  <span id="text"></span>
-		</div>
-	    <div class="alert alert-warning" role="alert">
-		  <input style="text-transform:uppercase" class="container-fluid text-center" type="text" id="input">
-		</div>
-		<div class="btn-group container-fluid" role="group">
-	      <button class="btn btn-primary" type="button" id="check">Check Answer</button>
-	      <button class="btn btn-secondary" type="button" id="random">Random</button>
-	    </div>
-      </div>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Rebus Puzzles</h1>
+        <div class="rebus-container">
+            <div class="alert alert-danger text-center" role="alert" id="hint">
+                <noscript>We need Javascript enabled for this to work. Enable javascript or switch to another browser.</noscript>
+            </div>
+            <div class="alert alert-success text-center" role="alert" id="correct"></div>
+            <div class="rebus-box">
+                <div class="rebus-info mb-3">
+                    <span class="badge badge-info">
+                        Rebus no.
+                        <input type="text" id="rebusNumber" size="2">
+                        <button type="button" class="badge badge-pill badge-success" id="goToRebus">Go</button>
+                        out of
+                        <span id="rebusTotal"></span>
+                    </span>
+                </div>
+                <div id="text" class="rebus-text mb-4"></div>
+                <input type="text" id="input" class="form-control text-center text-uppercase mb-4" placeholder="Your answer">
+                <div class="btn-group d-flex" role="group">
+                    <button class="btn btn-primary flex-grow-1" type="button" id="check">Check Answer</button>
+                    <button class="btn btn-secondary flex-grow-1" type="button" id="random">Random</button>
+                </div>
+            </div>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
